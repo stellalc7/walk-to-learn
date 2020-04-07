@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <title>Walk to Learn</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:url"                content="wwww.walktolearn.us" />
+    <meta property="og:type"               content="wonderful website" />
+    <meta property="og:title"              content="Walk to Learn" />
+    <meta property="og:description"        content="Take a walk, finish a podcast." />
+    <meta property="og:image"              content="https://image.ibb.co/nOT9ML/background-with-logo-v2.jpg" />
+
+    <link rel="icon" href="images/logo-only.png">
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="  crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAQf1AzMFe7bbwbqLGXCADyjpqL4wOXSQ&libraries=places"></script>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="wrapper">
+        <div class="nav" id="nav">
+            <a href="javascript:void(0)" class="close" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+        </div>
+
+        <span onclick="openNav()" class="open" id="open">&#9776</span>
+
+        <div id="page1">
+             <img id="logo" src="images/logo.png" class="responsive">
+             <h2>Let’s keep our air clean. Explore your environment via an enlightening stroll. Enter your route and receive 3 podcasts you can finish during your delightful walk!</h2><br>
+             <input id="txtautocomplete" placeholder="Start Address" /><br /><br/>
+             <input id="txtautocomplete_y" placeholder="End Address" /><br /><br/>
+             <input id="txtautocomplete_podcast" placeholder="Enter keyword (eg: hip hop)" /><br><br>
+             <br><br>
+            <span id="startbutton" class="btn_one" onClick="myFunction()">Find Podcasts</span>
+            <br><br><br><br><br>
+        </div>
+
+        <div id="page2">
+            <img id="logo" src="images/logo.png" class="responsive">
+            <h2>Loading your podcasts...</h2><br>
+            <div id="quoteContainer"><p id="quoteName"></p></div>
+        </div>
+
+        <div id="page3">
+            <img id="logo" src="images/logo.png" class="responsive">
+            <p id="results"></p>
+            <p id="temperature"></p>
+            <img id="tempIcon">
+
+            <p id="podcast-no-results"></p>
+
+            <p id="podcast-results-header" style="font-size:18px; font-weight: bold; color:#ffffff"></p>
+            <p id="podcast-result0"></p>
+            <p id="podcast-description0"></p>
+            <audio id="audio0" controls></audio>
+            <br><br>
+
+            <p id="podcast-result1"></p>
+            <p id="podcast-description1"></p>
+            <audio id="audio1" controls></audio>
+            <br><br>
+
+            <p id="podcast-result2"></p>
+            <p id="podcast-description2"></p>
+            <audio id="audio2" controls></audio>
+
+
+            <br><br><br><br><br><br><br><br>
+            <div id="facebook" class="fb-share-button" 
+                data-href="https://www.walktolearn.us" 
+                data-layout="button_count">
+            </div>
+            <br><br><br><br><br><br><br>
+            <div> <img src="images/listen-notes.png" alt="Listen Notes" width="150" height="14"> 
+            </div>
+            <a href="https://darksky.net/poweredby/" >Powered by Dark Sky</a>
+        </div>
+
+
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("open").style.display = "none";
+            document.getElementById("nav").style.width = "100%";
+        }
+        function closeNav() {
+            document.getElementById("nav").style.width = "0";
+            document.getElementById("open").style.display = "block";
+        }
+    </script>
+     <script src="js/main.js"></script>
+
+</body>
+</html>

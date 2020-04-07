@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Walk to Learn</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="  crossorigin="anonymous"></script>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="wrapper">
+        <div class="nav" id="nav">
+            <a href="javascript:void(0)" class="close" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+        </div>
+
+        <span onclick="openNav()" class="open" id="open">&#9776</span>
+
+        <div id="page1">
+            <img id="logo" src="images/logo.png" class="responsive">
+            <h4>Walk to Learn is a service inspired by the United Nations' Sustainable Development Goal to "make cities inclusive, safe, resilient and sustainable" by encouraging people to "bike, walk or use public transportations to keep our cities' air clean".<br><br>
+
+            We invite you to walk and learn. Share your route, and we will find podcasts that you can finish during your travel. Take a walk, finish a podcast!<br><br></h4>
+
+            
+            <h5>Say hello!<br>
+            Jacob Rangnitt - jacob.rangnitt@hyperisland.se<br>
+            Stella Choi - stella.choi@hyperisland.se</b><br>
+            </h5><br><br><br>
+        </div>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("open").style.display = "none";
+            document.getElementById("nav").style.width = "100%";
+        }
+        function closeNav() {
+            document.getElementById("nav").style.width = "0";
+            document.getElementById("open").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
